@@ -63,7 +63,7 @@ const Offers: React.FC = () => {
             <ul className="offers__box__list">
               {offer.benefits.map((benefit, index) => (
                 <li key={index} className="offers__box__list__item">
-                  <FontAwesomeIcon icon={faCheck} className="text-greenMedium" /> {benefit}
+                  <FontAwesomeIcon icon={faCheck} style={{color: "var(--color-greenMedium)"}} /> {benefit}
                 </li>
               ))}
             </ul>
