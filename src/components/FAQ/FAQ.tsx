@@ -1,6 +1,6 @@
 import Fragezeichen from "../../assets/Fragezeichen.png";
 import Ausrufezeichen from "../../assets/Ausrufezeichen.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./styles.css";
 
 interface FAQ {
