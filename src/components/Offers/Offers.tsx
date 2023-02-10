@@ -46,7 +46,6 @@ const Offers: React.FC = () => {
   return (
     <section id="offers" className="offers">
       <h2 className="section__header">Angebot</h2>
-      <div className="line"/>
       <div className="offers__box__container">
         {offers.map((offer, index) => (
           <div

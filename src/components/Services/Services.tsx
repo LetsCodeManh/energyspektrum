@@ -1,6 +1,7 @@
 import Beratung from "../../assets/Beratung.png";
 import Information from "../../assets/Information.png";
 import Vermittlung from "../../assets/Vermittlung.png";
+import "./styles.css"
 
 interface Service {
   service: string;
@@ -33,7 +34,6 @@ const Services: React.FC = () => {
     <section id="services" className="services">
       <div className="services__left__side">
         <h2 className="section__header">Services</h2>
-        <div className="line" />
         <h3 className="services__subheader">Das bietet Ihre Energiespektrum</h3>
         <p className="text">
           Wir bieten unseren Kundinen Orientierung und helfen bei der

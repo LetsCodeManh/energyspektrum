@@ -35,17 +35,6 @@ body {
   position: relative;
 }
 
-.section__header::before {
-  content: "";
-  height: 2px;
-  width: 30vmin;
-  position: absolute;
-  left: 50%;
-  bottom: -3px;
-  transform: translateX(-50%);
-  background-color: var(--color-greenHigh-3);
-}
-
 .text {
   font-size: clamp(0.75rem, 5vmin, 1rem);
   color: rgba(0, 0, 0, 0.7);
