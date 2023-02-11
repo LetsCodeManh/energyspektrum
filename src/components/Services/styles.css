@@ -1,5 +1,5 @@
 .services {
-  min-height: 100vh;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,5 +77,10 @@
   .services .section__header,
   .services__left__side {
     text-align: left;
+  }
+
+  .services__left__side,
+  .services__right__side {
+    width: 50%;
   }
 }

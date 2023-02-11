@@ -1,0 +1,86 @@
+.hero {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-inline: 1rem;
+}
+
+.hero__left__side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero__button {
+  background-color: var(--color-greenMedium);
+  color: var(--color-light);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: clamp(1rem, 8vmin, 1.25rem);
+  font-weight: 500;
+  line-height: 1.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 500ms ease;
+}
+
+.hero__button:hover {
+  scale: 1.1;
+  transform: translateY(-3px);
+}
+
+.hero__button:active {
+  transform: translateY(0);
+}
+
+.hero__right__side {
+  display: none;
+}
+
+.hero__image {
+  height: 400px;
+  aspect-ratio: 1 / 1;
+}
+
+@media (min-width: 800px) {
+  .hero {
+    padding-inline: 5%;
+  }
+
+  .hero__right__side {
+    display: block;
+  }
+
+  .hero .section__header {
+    text-align: left;
+  }
+
+  .hero__left__side {
+    align-items: start;
+  }
+}
+
+@media (min-width: 1300px) {
+  .hero {
+    padding-inline: 10%;
+  }
+}
+
+/* .rotating {
+  animation: rotation 2s linear infinite;
+} */
+
+/* @keyframes rotation {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+} */

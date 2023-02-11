@@ -1,9 +1,9 @@
 .offers {
-  min-height: 100vh;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-inline: 1rem
+  padding-inline: 1rem;
 }
 
 @media (min-width: 1300px) {
@@ -55,7 +55,7 @@
 }
 
 .offers__box__list__item {
-  font-size: clamp(0.65rem, 3vmin, .85rem);
+  font-size: clamp(0.65rem, 3vmin, 0.85rem);
   font-weight: 600;
   line-height: 1.7;
 }
@@ -63,7 +63,7 @@
 .offers__box__button {
   background-color: var(--color-greenMedium);
   color: var(--color-light);
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   border: none;
   border-radius: 0.5rem;
   font-size: clamp(0.65rem, 3vmin, 1rem);
