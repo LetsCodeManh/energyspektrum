@@ -8,6 +8,12 @@
   padding-inline: 1rem;
 }
 
+@media (min-width: 800px) {
+  .services {
+    padding-inline: 5%;
+  }
+}
+
 @media (min-width: 1300px) {
   .services {
     padding-inline: 10%;

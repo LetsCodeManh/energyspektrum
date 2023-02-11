@@ -6,6 +6,12 @@
   padding-inline: 1rem;
 }
 
+@media (min-width: 800px) {
+  .FAQ {
+    padding-inline: 5%;
+  }
+}
+
 @media (min-width: 1300px) {
   .FAQ {
     padding-inline: 10%;

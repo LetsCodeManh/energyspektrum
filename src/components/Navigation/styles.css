@@ -17,6 +17,12 @@
   }
 }
 
+@media (min-width: 800px) {
+  .navigation {
+    padding-inline: 5%;
+  }
+}
+
 @media (min-width: 1300px) {
   .navigation {
     padding-inline: 10%;
