@@ -1,3 +1,4 @@
+import AboutUs from "./components/AboutUs/AboutUs";
 import FAQ from "./components/FAQ/FAQ";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Offers />
       <Survey />
       <FAQ />
+      <AboutUs />
       <Footer />
     </div>
   );
