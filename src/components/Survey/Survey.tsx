@@ -1,7 +1,12 @@
-import "./styles.css"
+import "./styles.css";
 
-function Survey() {
-  return <div className="survey">Survey</div>;
-}
+const Survey: React.FC = () => {
+
+  return (
+    <section id="survey" className="survey">
+    Hello
+    </section>
+  );
+};
 
 export default Survey;
