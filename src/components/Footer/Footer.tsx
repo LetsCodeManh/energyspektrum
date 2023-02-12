@@ -21,25 +21,25 @@ interface FooterLink {
 
 const socialLinks: SocialLink[] = [
   {
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/energiespektrum/",
     icon: faInstagram,
     color: "#000000e3",
   },
   {
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/energiespektrum/",
     icon: faFacebookF,
     color: "#4267B2",
   },
   {
-    link: "https://www.twitter.com/",
+    link: "https://twitter.com/energiespektrum",
     icon: faTwitter,
     color: "#00acee",
   },
-  {
-    link: "https://www.linkedin.com/",
-    icon: faLinkedinIn,
-    color: "#0072b1",
-  },
+  // {
+  //   link: "https://www.linkedin.com/energiespektrum/",
+  //   icon: faLinkedinIn,
+  //   color: "#0072b1",
+  // },
 ];
 
 const footerLinks: FooterLink[] = [

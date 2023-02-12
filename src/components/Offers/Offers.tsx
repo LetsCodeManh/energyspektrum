@@ -1,14 +1,16 @@
-import Photovoltaik from "../../assets/Photovoltaik-Anlage.jpg";
-import Balkonkraftwerk from "../../assets/Balkonkraftwerk.jpg";
+import Photovoltaik from "../../assets/Photovoltaik-Anlage.png";
+import Balkonkraftwerk from "../../assets/Balkonkraftwerk.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import "./styles.css"
+import "./styles.css";
 
 interface Offer {
   header: string;
   description: string;
   benefits: string[];
   image: string;
+  affiliate: string;
+  button: string;
 }
 
 const offers: Offer[] = [
@@ -22,6 +24,8 @@ const offers: Offer[] = [
       "Hohe Stromproduktion",
     ],
     image: Photovoltaik,
+    affiliate: "#survey",
+    button: "Angebot anforden",
   },
   {
     header: "Balkonkraftwerk",
@@ -33,12 +37,8 @@ const offers: Offer[] = [
       "Return of Invest bereits nach 3-4 Jahren",
     ],
     image: Balkonkraftwerk,
-  },
-  {
-    header: "Offer 3",
-    description: "Description of Offer 3",
-    benefits: ["Benefit 1", "Benefit 2", "Benefit 3"],
-    image: Balkonkraftwerk,
+    affiliate: "https://www.solar-volt.de/?ref=oE16Wkg-9mbnRD",
+    button: "Zum Angebot",
   },
 ];
 
@@ -48,10 +48,7 @@ const Offers: React.FC = () => {
       <h2 className="section__header">Angebot</h2>
       <div className="offers__box__container">
         {offers.map((offer, index) => (
-          <div
-            className="offers__box"
-            key={index}
-          >
+          <div className="offers__box" key={index}>
             <img
               src={offer.image}
               alt={offer.header}
@@ -62,15 +59,21 @@ const Offers: React.FC = () => {
             <ul className="offers__box__list">
               {offer.benefits.map((benefit, index) => (
                 <li key={index} className="offers__box__list__item">
-                  <FontAwesomeIcon icon={faCheck} style={{color: "var(--color-greenMedium)"}} /> {benefit}
+                  <FontAwesomeIcon
+                    icon={faCheck}
+                    style={{ color: "var(--color-greenMedium)" }}
+                  />{" "}
+                  {benefit}
                 </li>
               ))}
             </ul>
-            <button
+            <a
               className="offers__box__button"
+              href={offer.affiliate}
+              target="_blank"
             >
-              More Infos
-            </button>
+              {offer.button}
+            </a>
           </div>
         ))}
       </div>

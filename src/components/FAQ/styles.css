@@ -1,9 +1,10 @@
 .FAQ {
-  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 4rem;
   padding-inline: 1rem;
+  background-color: var(--color-greenLight);
 }
 
 @media (min-width: 800px) {

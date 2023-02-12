@@ -1,5 +1,5 @@
-import { useState } from "react";
 import "./styles.css";
+import Logo from "../../assets/Logo.png";
 
 interface Link {
   href: string;
@@ -13,7 +13,7 @@ const links: Link[] = [
   },
   {
     href: "#mitglied",
-    label: "Mitglied werden",
+    label: "Partner werden",
   },
   {
     href: "#contact",
@@ -25,7 +25,7 @@ const Navigation: React.FC = () => {
   return (
     <header className="navigation">
       <a href="#" className="navigation__logo">
-        Energyspektrum
+        <img src={Logo} alt="Energyspektrum Logo" className="navigation__image" />
       </a>
 
       <nav className="navigation__list">

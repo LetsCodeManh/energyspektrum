@@ -36,6 +36,10 @@
   letter-spacing: 1px;
 }
 
+.navigation__image {
+  height: 50px;
+}
+
 .navigation__hamburger {
   display: block;
 }
