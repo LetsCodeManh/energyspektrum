@@ -1,11 +1,11 @@
 import {
   faFacebookF,
   faInstagram,
-  faLinkedinIn,
   faTwitter,
   IconDefinition,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 interface SocialLink {
@@ -35,25 +35,16 @@ const socialLinks: SocialLink[] = [
     icon: faTwitter,
     color: "#00acee",
   },
-  // {
-  //   link: "https://www.linkedin.com/energiespektrum/",
-  //   icon: faLinkedinIn,
-  //   color: "#0072b1",
-  // },
 ];
 
 const footerLinks: FooterLink[] = [
   {
     label: "Datenschutz",
-    href: "#",
+    href: "/energyspektrum/datenschutz",
   },
   {
     label: "Impressum",
-    href: "#",
-  },
-  {
-    label: "Über Uns",
-    href: "#",
+    href: "/energyspektrum/impressum",
   },
 ];
 
@@ -72,8 +63,8 @@ const Footer: React.FC = () => {
       </div>
       <div className="footer__container">
         {socialLinks.map((link, index) => (
-          <a
-            href={link.link}
+          <Link
+            to={link.link}
             target="_blank"
             rel="noopener noreferrer"
             className="footer__sociallink"
@@ -81,7 +72,7 @@ const Footer: React.FC = () => {
             style={{ backgroundColor: link.color }}
           >
             <FontAwesomeIcon icon={link.icon} size="xl" />
-          </a>
+          </Link>
         ))}
       </div>
     </footer>

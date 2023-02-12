@@ -6,7 +6,7 @@ import Offers from "./components/Offers/Offers";
 import Services from "./components/Services/Services";
 import Survey from "./components/Survey/Survey";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <Navigation />
@@ -18,6 +18,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
