@@ -16,7 +16,7 @@ const links: Link[] = [
     label: "Partner werden",
   },
   {
-    href: "#contact",
+    href: "#survey",
     label: "Kontakt",
   },
 ];

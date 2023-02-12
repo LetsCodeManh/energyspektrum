@@ -56,6 +56,7 @@ const FAQ: React.FC = () => {
 
   return (
     <section id="FAQ" className="FAQ">
+      <div className="angle__background"/>
       <h2 className="section__header">FAQs</h2>
       <div className="FAQ__container">
         {faqs.map((faq, index) => (

@@ -32,6 +32,7 @@ const services: Service[] = [
 const Services: React.FC = () => {
   return (
     <section id="services" className="services">
+      <div className="angle__background"/>
       <div className="services__left__side">
         <h2 className="section__header">Services</h2>
         <h3 className="services__subheader">Das bietet Ihre Energiespektrum</h3>
