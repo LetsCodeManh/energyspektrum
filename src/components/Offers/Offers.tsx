@@ -11,7 +11,7 @@ type Offer = {
   image: string;
   affiliate: string;
   button: string;
-}
+};
 
 const offers: Offer[] = [
   {
@@ -70,7 +70,7 @@ const Offers: React.FC = () => {
             <a
               className="offers__box__button"
               href={offer.affiliate}
-              target="_blank"
+              target={offer.affiliate !== "#survey" ? "_blank" : "_self"}
             >
               {offer.button}
             </a>

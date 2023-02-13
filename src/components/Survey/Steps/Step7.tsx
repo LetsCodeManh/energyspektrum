@@ -4,29 +4,34 @@ import RadioButton from "./RadioButton";
 import Something from "../../../assets/Something.svg";
 
 type SurveyData = {
-  PowerStorage: string;
+  Finanze: string;
 };
 
 type SurveyFormProps = SurveyData & {
   updateFields: (fields: Partial<SurveyData>) => void;
 };
 
-const Step6 = ({ PowerStorage, updateFields }: SurveyFormProps) => {
-  const [selectedValue, setSelectedValue] = useState(PowerStorage);
+const Step7 = ({ Finanze, updateFields }: SurveyFormProps) => {
+  const [selectedValue, setSelectedValue] = useState(Finanze);
 
   return (
-    <FormWrapper title="Möchten Sie die Photovoltaik-Anlage durch einen Stromspeicher ergänzen?">
+    <FormWrapper title="Welche Finanzierung kommt für Sie in Frage?">
       <RadioButton
         options={[
           {
             image: Something,
-            text: "Ja",
-            value: "Ja",
+            text: "Kaufen",
+            value: "Kaufen",
           },
           {
             image: Something,
-            text: "Nein",
-            value: "Nein",
+            text: "Mieten",
+            value: "Mieten",
+          },
+          {
+            image: Something,
+            text: "Beides Interessant",
+            value: "Beides Interessant",
           },
           {
             image: Something,
@@ -37,11 +42,11 @@ const Step6 = ({ PowerStorage, updateFields }: SurveyFormProps) => {
         selectedValue={selectedValue}
         onChange={(value) => {
           setSelectedValue(value);
-          updateFields({ PowerStorage: value });
+          updateFields({ Finanze: value });
         }}
       />
     </FormWrapper>
   );
 }
 
-export default Step6;
+export default Step7;

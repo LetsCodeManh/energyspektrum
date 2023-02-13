@@ -4,54 +4,54 @@ import RadioButton from "./RadioButton";
 import Something from "../../../assets/Something.svg";
 
 type SurveyData = {
-  WoPhotovoltaik: string;
+  Age: string;
 };
 
 type SurveyFormProps = SurveyData & {
   updateFields: (fields: Partial<SurveyData>) => void;
 };
 
-const Step1 = ({ WoPhotovoltaik, updateFields }: SurveyFormProps) => {
-  const [selectedValue, setSelectedValue] = useState(WoPhotovoltaik);
+const Step8 = ({ Age, updateFields }: SurveyFormProps) => {
+  const [selectedValue, setSelectedValue] = useState(Age);
 
   return (
-    <FormWrapper title="Wo möchten Sie die Photovoltaik installieren?">
+    <FormWrapper title="Wie alt sind Sie? (Relevant für Finanzierungsoptionen)?">
       <RadioButton
         options={[
           {
             image: Something,
-            text: "Ein-/Zweifamilienhaus",
-            value: "Ein-/Zweifamilienhaus",
+            text: "20-40 Jahre",
+            value: "20-40 Jahre",
           },
           {
             image: Something,
-            text: "Mehrfamilienhaus",
-            value: "Mehrfamilienhaus",
+            text: "41-50 Jahre",
+            value: "41-50 Jare",
           },
           {
             image: Something,
-            text: "Firmengebäude",
-            value: "Firmengebäude",
+            text: "51-70 Jahre",
+            value: "51-70 Jahre",
           },
           {
             image: Something,
-            text: "Freilandfläche",
-            value: "Freilandfläche",
+            text: "Über 70 Jahre",
+            value: "Über 70 Jahre",
           },
           {
             image: Something,
-            text: "Sonstiges",
-            value: "Sonstiges",
+            text: "Keine Angabe",
+            value: "Keine Angabe",
           },
         ]}
         selectedValue={selectedValue}
         onChange={(value) => {
           setSelectedValue(value);
-          updateFields({ WoPhotovoltaik: value });
+          updateFields({ Age: value });
         }}
       />
     </FormWrapper>
   );
-};
+}
 
-export default Step1;
+export default Step8;

@@ -1,11 +1,9 @@
 .offers {
-  margin-top: 4rem;
+  padding-block: 4rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding-inline: 1rem;
-  z-index: 100;
-  overflow: hidden;
 }
 
 @media (min-width: 800px) {

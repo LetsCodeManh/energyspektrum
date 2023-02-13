@@ -1,22 +1,50 @@
+import { useState } from "react";
 import FormWrapper from "./FormWrapper";
+import RadioButton from "./RadioButton";
+import Something from "../../../assets/Something.svg";
 
-type UserData = {
-  step1: string;
+type SurveyData = {
+  Type: string;
 };
 
-type UserFormProps = UserData & {
-  updateFields: (fields: Partial<UserData>) => void;
+type SurveyFormProps = SurveyData & {
+  updateFields: (fields: Partial<SurveyData>) => void;
 };
 
-function Step2({ step1, updateFields }: UserFormProps) {
+const Step2 = ({ Type, updateFields }: SurveyFormProps) => {
+  const [selectedValue, setSelectedValue] = useState(Type);
+
   return (
-    <FormWrapper title="Step 2">
-      <input type="radio" id="step1" name="step2" value="step1" />
-      <label htmlFor="">Step1</label>
-      <input type="radio" id="step2" name="step2" value="step2" />
-      <label htmlFor="">Step2</label>
-      <input type="radio" id="step3" name="step2" value="step3" />
-      <label htmlFor="">Step3</label>
+    <FormWrapper title="Um welchen Gebäudetyp handelt es sich?">
+      <RadioButton
+        options={[
+          {
+            image: Something,
+            text: "freistehendes Haus",
+            value: "freistehendes Haus",
+          },
+          {
+            image: Something,
+            text: "Doppelhaushälfte",
+            value: "Doppelhaushälfte",
+          },
+          {
+            image: Something,
+            text: "Reihenmittelhaus",
+            value: "Reihenmittelhaus",
+          },
+          {
+            image: Something,
+            text: "Reihenendhaus",
+            value: "Reihenendhaus",
+          },
+        ]}
+        selectedValue={selectedValue}
+        onChange={(value) => {
+          setSelectedValue(value);
+          updateFields({ Type: value });
+        }}
+      />
     </FormWrapper>
   );
 }

@@ -1,16 +1,42 @@
-interface SurveyProps {
-  nextStep: () => void;
-  prevStep: () => void;
-}
+import { useState } from "react";
+import FormWrapper from "./FormWrapper";
+import RadioButton from "./RadioButton";
+import Something from "../../../assets/Something.svg";
 
-const Step3: React.FC<SurveyProps> = ({ nextStep, prevStep }) => {
-  return (
-    <div>
-      <h1>Step 1</h1>
-      <button onClick={nextStep}>Next Step</button>
-      <button onClick={prevStep}>Prev Step</button>
-    </div>
-  );
+type SurveyData = {
+  Living: string;
 };
 
-export default Step3
+type SurveyFormProps = SurveyData & {
+  updateFields: (fields: Partial<SurveyData>) => void;
+};
+
+const Step3 = ({ Living, updateFields }: SurveyFormProps) => {
+  const [selectedValue, setSelectedValue] = useState(Living);
+
+  return (
+    <FormWrapper title="Bewohnen Sie die Immobilie selbst?">
+      <RadioButton
+        options={[
+          {
+            image: Something,
+            text: "Ja",
+            value: "Ja",
+          },
+          {
+            image: Something,
+            text: "Nein",
+            value: "Nein",
+          },
+        ]}
+        selectedValue={selectedValue}
+        onChange={(value) => {
+          setSelectedValue(value);
+          updateFields({ Living: value });
+        }}
+      />
+    </FormWrapper>
+  );
+}
+
+export default Step3;
