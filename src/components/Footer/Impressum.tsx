@@ -1,9 +1,8 @@
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import { Link, RouteProps } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Impressum: React.FC<RouteProps> = () => {
+const Impressum: React.FC = () => {
   return (
     <main className="datenschutz">
       <Link to="/energyspektrum/" className="back__button">

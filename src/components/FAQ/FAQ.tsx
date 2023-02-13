@@ -3,10 +3,10 @@ import Ausrufezeichen from "../../assets/Ausrufezeichen.png";
 import { useState } from "react";
 import "./styles.css";
 
-interface FAQ {
+type FAQ = {
   question: string;
   answer: string;
-}
+};
 
 const faqs: FAQ[] = [
   {
@@ -56,7 +56,7 @@ const FAQ: React.FC = () => {
 
   return (
     <section id="FAQ" className="FAQ">
-      <div className="angle__background"/>
+      <div className="angle__background" />
       <h2 className="section__header">FAQs</h2>
       <div className="FAQ__container">
         {faqs.map((faq, index) => (

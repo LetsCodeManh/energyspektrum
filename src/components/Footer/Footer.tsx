@@ -8,13 +8,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import "./styles.css";
 
-interface SocialLink {
+type SocialLink = {
   link: string;
   icon: IconDefinition;
   color: string;
 }
 
-interface FooterLink {
+type FooterLink = {
   label: string;
   href: string;
 }

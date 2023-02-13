@@ -3,7 +3,7 @@ import Information from "../../assets/Information.png";
 import Vermittlung from "../../assets/Vermittlung.png";
 import "./styles.css"
 
-interface Service {
+type Service = {
   service: string;
   description: string;
   image: string;

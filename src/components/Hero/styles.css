@@ -18,7 +18,7 @@
 .hero__button {
   background-color: var(--color-greenMedium);
   color: var(--color-light);
-  padding: .75rem;
+  padding: 0.75rem;
   border-radius: 0.5rem;
   font-size: clamp(1rem, 6vmin, 1.15rem);
   font-weight: 500;
@@ -29,6 +29,7 @@
   gap: 0.5rem;
   transition: all 500ms ease;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .hero__button:hover {

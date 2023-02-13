@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 
-interface Offer {
+type Offer = {
   header: string;
   description: string;
   benefits: string[];

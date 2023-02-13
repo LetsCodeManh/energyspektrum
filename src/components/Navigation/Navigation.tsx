@@ -1,7 +1,7 @@
 import "./styles.css";
 import Logo from "../../assets/Logo.png";
 
-interface Link {
+type Link = {
   href: string;
   label: string;
 }
