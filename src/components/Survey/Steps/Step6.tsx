@@ -5,13 +5,14 @@ import Something from "../../../assets/Something.svg";
 
 type SurveyData = {
   PowerStorage: string;
+  next: () => void
 };
 
 type SurveyFormProps = SurveyData & {
   updateFields: (fields: Partial<SurveyData>) => void;
 };
 
-const Step6 = ({ PowerStorage, updateFields }: SurveyFormProps) => {
+const Step6 = ({ PowerStorage, updateFields, next }: SurveyFormProps) => {
   const [selectedValue, setSelectedValue] = useState(PowerStorage);
 
   return (
@@ -38,6 +39,7 @@ const Step6 = ({ PowerStorage, updateFields }: SurveyFormProps) => {
         onChange={(value) => {
           setSelectedValue(value);
           updateFields({ PowerStorage: value });
+          next()
         }}
       />
     </FormWrapper>

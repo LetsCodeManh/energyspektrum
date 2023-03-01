@@ -51,7 +51,7 @@ body {
   left: -10%;
   right: -10%;
   transform: rotate(-3deg);
-  height: 90%;
+  height: 50%;
   background-color: var(--color-greenLight);
   z-index: -99;
 }

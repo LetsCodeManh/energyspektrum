@@ -18,7 +18,7 @@
 .hero__button {
   background-color: var(--color-greenMedium);
   color: var(--color-light);
-  padding: 0.75rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
   font-size: clamp(1rem, 6vmin, 1.15rem);
   font-weight: 500;

@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { useMultistepForm } from "../customHooks/useMultistepFrom";
 import Step1 from "./Steps/Step1";
 import Step10 from "./Steps/Step10";
@@ -23,7 +23,9 @@ type FormData = {
   Finanze: string;
   Age: string;
   When: string;
-  name: string;
+  vorname: string;
+  nachname: string;
+  tel: string;
   email: string;
 };
 
@@ -37,7 +39,9 @@ const INITIAL_DATA: FormData = {
   Finanze: "",
   Age: "",
   When: "",
-  name: "",
+  vorname: "",
+  nachname: "",
+  tel: "",
   email: "",
 };
 
@@ -50,24 +54,24 @@ const Survey: React.FC = () => {
     });
   }
 
-  const { steps, step, currentStepIndex, isFirstStep, isLastStep, back, next } =
-    useMultistepForm([
-      <Step1 {...data} updateFields={updateFields} />,
-      <Step2 {...data} updateFields={updateFields} />,
-      <Step3 {...data} updateFields={updateFields} />,
-      <Step4 {...data} updateFields={updateFields} />,
-      <Step5 {...data} updateFields={updateFields} />,
-      <Step6 {...data} updateFields={updateFields} />,
-      <Step7 {...data} updateFields={updateFields} />,
-      <Step8 {...data} updateFields={updateFields} />,
-      <Step9 {...data} updateFields={updateFields} />,
-      <Step10 {...data} />,
-      <Step11 {...data} updateFields={updateFields} />,
-    ]);
+  const { steps, step, currentStepIndex, isLastStep, next } = useMultistepForm([
+    <Step1 {...data} updateFields={updateFields} next={onSubmit} />,
+    <Step2 {...data} updateFields={updateFields} next={onSubmit} />,
+    <Step3 {...data} updateFields={updateFields} next={onSubmit} />,
+    <Step4 {...data} updateFields={updateFields} next={onSubmit} />,
+    <Step5 {...data} updateFields={updateFields} next={onSubmit} />,
+    <Step6 {...data} updateFields={updateFields} next={onSubmit} />,
+    <Step7 {...data} updateFields={updateFields} next={onSubmit} />,
+    <Step8 {...data} updateFields={updateFields} next={onSubmit} />,
+    <Step9 {...data} updateFields={updateFields} next={onSubmit} />,
+    // <Step10 {...data} />,
+    <Step11 {...data} updateFields={updateFields} />,
+  ]);
 
-  function onSubmit(e: FormEvent) {
-    e.preventDefault();
-    if (!isLastStep) return next();
+  function onSubmit() {
+    if (!isLastStep) {
+      return next();
+    }
     alert("Successful!");
   }
 
@@ -77,9 +81,9 @@ const Survey: React.FC = () => {
       <form onSubmit={onSubmit} className="survey__container">
         {step}
         <div className="survey__progressBar">
-          <p className="text">{`${
+          <p className="text">{`${Math.round(
             (currentStepIndex / (steps.length - 1)) * 100
-          }%`}</p>
+          )}%`}</p>
           <div className="progressBar">
             <div
               className="progressBar__fill"
@@ -89,16 +93,13 @@ const Survey: React.FC = () => {
             />
           </div>
         </div>
-        <div className="survey__button__container">
-          {isFirstStep && (
-            <button type="button" onClick={back} className="survey__button">
-              Back
+        {isLastStep && (
+          <div className="survey__button__container">
+            <button type="submit" className="survey__button">
+              Confirm
             </button>
-          )}
-          <button type="submit" className="survey__button">
-            {isLastStep ? "Confirm" : "Next"}
-          </button>
-        </div>
+          </div>
+        )}
       </form>
     </section>
   );

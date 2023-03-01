@@ -5,13 +5,14 @@ import Something from "../../../assets/Something.svg";
 
 type SurveyData = {
   Living: string;
+  next: () => void
 };
 
 type SurveyFormProps = SurveyData & {
   updateFields: (fields: Partial<SurveyData>) => void;
 };
 
-const Step3 = ({ Living, updateFields }: SurveyFormProps) => {
+const Step3 = ({ Living, updateFields, next }: SurveyFormProps) => {
   const [selectedValue, setSelectedValue] = useState(Living);
 
   return (
@@ -33,6 +34,7 @@ const Step3 = ({ Living, updateFields }: SurveyFormProps) => {
         onChange={(value) => {
           setSelectedValue(value);
           updateFields({ Living: value });
+          next()
         }}
       />
     </FormWrapper>
