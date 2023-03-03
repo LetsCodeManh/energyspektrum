@@ -4,6 +4,7 @@ Solar Survey Website is a web application built with React, TypeScript, and Vite
 
 ## Screenshot
 
+<img width="1427" alt="Screenshot 2023-03-03 at 12 26 11" src="https://user-images.githubusercontent.com/98701957/222709185-edae5f6e-4382-4159-b599-53699a7d4b43.png">
 
 ## Live Demo
 
