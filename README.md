@@ -1,8 +1,9 @@
 # Solar Survey Website
 
-Solar Survey Website is a web application built with React, TypeScript, and Vite. It is a survey designed to teach users about the solar plants. The website was built based on a design provided by the client.
+Solar Survey Website is a web application built with React, TypeScript, and Vite. It is a survey designed to teach users about solar plants and provide them with solutions for their solar energy needs. The website was built based on a design provided by the client.
 
 ## Screenshot
+
 
 ## Live Demo
 
