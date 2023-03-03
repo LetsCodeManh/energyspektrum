@@ -37,6 +37,12 @@
   overflow: hidden;
 }
 
+@media (min-width: 700px) {
+  .progressBar {
+    width: 80%;
+  }
+}
+
 .progressBar__fill {
   background-color: var(--color-greenMedium);
   height: 20px;
