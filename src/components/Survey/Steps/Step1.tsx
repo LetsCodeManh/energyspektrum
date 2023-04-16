@@ -2,6 +2,7 @@ import { useState } from "react";
 import FormWrapper from "./FormWrapper";
 import RadioButton from "./RadioButton";
 import Something from "../../../assets/Something.svg";
+import Spaceship from "../../../assets/Spaceship.png";
 import { useMultistepForm } from "../../customHooks/useMultistepFrom";
 
 type SurveyData = {
@@ -15,7 +16,7 @@ type SurveyFormProps = SurveyData & {
 
 const options = [
   {
-    image: Something,
+    image: Spaceship,
     text: "Ein-/Zweifamilienhaus",
     value: "Ein-/Zweifamilienhaus",
   },

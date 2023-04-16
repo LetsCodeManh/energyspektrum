@@ -46,7 +46,8 @@
 
 .navigation__list {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 2rem;
 }
 
 .navigation__link {

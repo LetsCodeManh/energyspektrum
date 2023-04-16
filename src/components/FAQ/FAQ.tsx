@@ -56,9 +56,9 @@ const FAQ: React.FC = () => {
 
   return (
     <section id="FAQ" className="FAQ">
-      <div className="angle__background" />
       <h2 className="section__header">FAQs</h2>
       <div className="FAQ__container">
+        <div className="angle__background" />
         {faqs.map((faq, index) => (
           <div key={index} className="FAQ__box">
             <button className="FAQ__button" onClick={() => handleClick(index)}>

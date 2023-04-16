@@ -1,5 +1,6 @@
 import "./styles.css";
 import Logo from "../../assets/Logo.png";
+import HoverButton from "../Reuse/Button/HoverButton";
 
 type Link = {
   href: string;
@@ -10,10 +11,6 @@ const links: Link[] = [
   {
     href: "#services",
     label: "Services",
-  },
-  {
-    href: "#mitglied",
-    label: "Partner werden",
   },
   {
     href: "#survey",
@@ -38,6 +35,9 @@ const Navigation: React.FC = () => {
             {link.label}
           </a>
         ))}
+        <a href="#mitglied">
+          <HoverButton text="Partner werden" />
+        </a>
       </nav>
     </header>
   );

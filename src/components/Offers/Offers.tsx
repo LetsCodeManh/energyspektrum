@@ -40,6 +40,19 @@ const offers: Offer[] = [
     affiliate: "https://www.solar-volt.de/?ref=oE16Wkg-9mbnRD",
     button: "Zum Angebot",
   },
+  {
+    header: "Balkonkraftwerk",
+    description:
+      "Bestehend aus 1-4 Modulen, Speichereinheit nicht intergrierbar",
+    benefits: [
+      "für Einsteiger",
+      "Geringe Anschaffungskoten",
+      "Return of Invest bereits nach 3-4 Jahren",
+    ],
+    image: Balkonkraftwerk,
+    affiliate: "https://www.solar-volt.de/?ref=oE16Wkg-9mbnRD",
+    button: "Zum Angebot",
+  },
 ];
 
 const Offers: React.FC = () => {
